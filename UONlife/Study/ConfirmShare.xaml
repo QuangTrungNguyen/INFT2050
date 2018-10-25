@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="UONlife.Study.ConfirmShare"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UONlife.Study"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/Background/Record.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Study" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="Share lecture record" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" FontSize="40"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="File Name:" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="lblName" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Download Address:" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="lblAddress" HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,251,0,0" TextWrapping="Wrap" Text="Once confirmed to share this record, please press Confirm. Otherwise, click back button." VerticalAlignment="Top" FontSize="20" Width="326"/>
+            <Button x:Name="btnShare" Content="Share" HorizontalAlignment="Left" Margin="10,391,0,0" VerticalAlignment="Top" Width="326" Click="btnShare_Click"/>
+
+        </Grid>
+    </Grid>
+</Page>

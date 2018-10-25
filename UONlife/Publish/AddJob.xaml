@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="UONlife.Publish.AddJob"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UONlife.Publish"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/Background/Publish.png"/>
+    </Page.Background>
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="64*"/>
+            </Grid.ColumnDefinitions>
+            <Pivot x:Name="rootPivot" Title="Recruiting" Grid.ColumnSpan="2">
+                <PivotItem Header="Info" Margin="0,10,-0.333,12.167">
+                    <!--TODO: Content should be placed within the following grid-->
+                    <Grid Grid.Row="1" x:Name="ContentJob" Margin="19,9.833,19,97">
+                        <TextBox x:Name="tbxTitle" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Job Title"/>
+                        <TextBox x:Name="tbxType" HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Job Type (FT/PT/Contract)"/>
+                        <TextBox x:Name="tbxClassification" HorizontalAlignment="Left" Margin="0,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Classification"/>
+                        <TextBox x:Name="tbxSalary" HorizontalAlignment="Left" Margin="0,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Salary with Unit"/>
+                        <TextBox x:Name="tbxDescription" HorizontalAlignment="Left" Margin="0,225,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" Height="87" PlaceholderText="Description"/>
+                        <TextBox x:Name="tbxWorkingPlace" HorizontalAlignment="Left" Margin="0,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Working Place" Height="34"/>
+                        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Margin="0,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302" PlaceholderText="Contact"/>
+                    </Grid>
+                </PivotItem>
+                <PivotItem Header="Requirements" Margin="12,10,-0.333,12.167">
+                    <Grid>
+                        <TextBox x:Name="tbxRequirements" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="477" Width="313" PlaceholderText="Job Requirements"/>
+
+                    </Grid>
+
+                </PivotItem>
+                <PivotItem Header="Upload" Margin="2,10,9.667,12.167">
+                    <Grid x:Name="gridView" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="360" Margin="0,0,-10,0">
+
+                        <TextBlock x:Name="lblAnnouncement" HorizontalAlignment="Left" TextWrapping="Wrap" Text="The information that you have provided will be uploaded to Cloud and other users are able to check it. Be sure the information and photos will not leak your individual privacy. Do not upload any illegal images. You take your own risk if your behaviour obey the law." VerticalAlignment="Top" FontFamily="Calibri" FontSize="22" Width="325" Margin="10,0,0,0"/>
+                        <Button x:Name="btnUpload" Content="Upload" Width="325" Click="btnUpload_Click" Margin="10,241,0,121"/>
+
+                    </Grid>
+
+                </PivotItem>
+            </Pivot>
+        </Grid>
+    </Grid>
+</Page>

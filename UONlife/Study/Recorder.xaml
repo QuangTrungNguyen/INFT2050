@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="UONlife.Study.Recorder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UONlife.Study"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/Background/Record.png"/>
+    </Page.Background>
+
+    <Grid>
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="Study" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+
+            <TextBlock Text="Record Lecture
+                       " Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+
+        </StackPanel>
+        <MediaElement x:Name="playbackElement1" ></MediaElement>
+        <Button x:Name="CaptureButton" Content="Capture Audio" HorizontalAlignment="Left" Margin="33,243,0,0" VerticalAlignment="Top" Click="CaptureButton_Click" Width="319"/>
+        <Button x:Name="StopCaptureButton" Content="Stop Capture" HorizontalAlignment="Left" Margin="33,286,0,0" VerticalAlignment="Top" Click="StopCaptureButton_Click" Width="319" IsEnabled="False"/>
+        <Button x:Name="PlayRecordButton" Content="Play Capture" HorizontalAlignment="Left" Margin="33,329,0,0" VerticalAlignment="Top" Click="PlayRecordButton_Click" Width="319" IsEnabled="False"/>
+        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Margin="33,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" PlaceholderText="Course ID"/>
+        <TextBox x:Name="tbxWeek" HorizontalAlignment="Left" Margin="33,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" PlaceholderText="Week Number"/>
+        <Button x:Name="btnSave" Content="Upload File To Cloud" HorizontalAlignment="Left" Margin="33,372,0,0" VerticalAlignment="Top" Width="319" IsEnabled="False" Click="btnSave_Click"/>
+        <ProgressBar x:Name="progress" VerticalAlignment="Stretch" Margin="0,452,0,165" Visibility="Collapsed"/>
+    </Grid>
+</Page>

@@ -1,0 +1,121 @@
+﻿<Page
+    x:Class="UONlife.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UONlife"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill" ImageSource="Images/Background/MainPage.png"/>
+    </Page.Background>
+
+    <Grid>
+        <Pivot x:Name="rootPivot" Title="UONlife">
+            <PivotItem Header="View" Margin="12,10,26,12.333">
+                <GridView x:Name="gridView" HorizontalAlignment="Left" Height="482" VerticalAlignment="Top" Width="350" Margin="13,0,0,0">
+                    <Button x:Name="btnTextbook" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="110" Click="btnTextbook_Click" Content="Text&#xD;&#xA;book" Margin="0" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush Stretch="None" ImageSource="/Images/LifeIcons/Textbook.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnAccommodation" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="105" Height="110" Click="btnAccommodation_Click" Content="Room" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Accommodation.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnAssociation" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="110" Click="btnAssociation_Click" Content="Club" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Association.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnJobs" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="105" Height="110" Click="btnJobs_Click" Content="Jobs" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Jobs.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnParty" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnParty_Click" Content="Party" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Party.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnStuff" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnStuff_Click" Content="Buy&#xD;&#xA;Stuff" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Stuff.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+
+                </GridView>
+            </PivotItem>
+
+            <PivotItem Header="Publish">
+                <GridView x:Name="publish" HorizontalAlignment="Left" Height="482" VerticalAlignment="Top" Width="350" Margin="13,0,0,0">
+                    <Button x:Name="btnTextbookAdd" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Height="110" Click="btnTextbookAdd_Click" Content="Text&#xD;&#xA;book " Margin="0" FontSize="24" FontFamily="Calibri">
+                        <Button.Background>
+                            <ImageBrush Stretch="None" ImageSource="/Images/LifeIcons/Textbook.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnAccommodationAdd" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="105" Height="110" Click="btnAccommodationAdd_Click" Content="Room" FontSize="24" FontFamily="Calibri">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Accommodation.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnAssociationAdd" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="105" Height="110" Click="btnAssociationAdd_Click" Content="Club" FontSize="24" FontFamily="Calibri">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Association.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnJobsAdd" BorderThickness="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="105" Height="110" Click="btnAddJobs_Click" Content="Jobs" FontSize="24" FontFamily="Calibri">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Jobs.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnPartyAdd" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnPartyAdd_Click" Content="Party" FontSize="24" FontFamily="Calibri">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Party.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnStuffAdd" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnStuffAdd_Click" Content="Stuff" FontFamily="Calibri" FontSize="24">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Stuff.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                </GridView>
+            </PivotItem>
+
+            <PivotItem Header="Lecture">
+                <GridView x:Name="add" HorizontalAlignment="Left" Height="482" VerticalAlignment="Top" Width="350" Margin="13,0,0,0">
+                    <Button x:Name="btnRecorder" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnRecorder_Click" Content="Recorder" FontFamily="Calibri" FontSize="20">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:/Images/LifeIcons/Friends.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnCloudRecord" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnRecordCloud_Click" Content="Your&#xD;&#xA;Recordings" FontFamily="Calibri" FontSize="20">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/LifeIcons/DownloadRecord.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnRecordUpload" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnRecordUpload_Click" Content="Upload&#xA;Record" FontFamily="Calibri" FontSize="20">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/LifeIcons/UploadRecord.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnSharedRecord" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="105" Height="110" Click="btnSharedRecord_Click" Content="Public&#xD;&#xA;Recordings" FontFamily="Calibri" FontSize="20">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/LifeIcons/SharedRecord.png" Stretch="None"/>
+                        </Button.Background>
+                    </Button>
+                </GridView>
+
+            </PivotItem>
+            <PivotItem Header="Portal" Margin="11,10,27,12.333">
+                <Grid x:Name="gridView1" HorizontalAlignment="Left" Height="508" VerticalAlignment="Top" Width="380" Margin="10,10,0,0">
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Welcome," VerticalAlignment="Top" FontSize="35"/>
+                    <TextBlock x:Name="tbxUsername" HorizontalAlignment="Left" Margin="180,10,0,0" TextWrapping="Wrap" Text="Loading" VerticalAlignment="Top" FontSize="35"/>
+                    <Button x:Name="btnPortal" Content="View my personal portal" HorizontalAlignment="Left" Margin="10,406,0,0" VerticalAlignment="Top" Width="327" Click="btnPortal_Click"/>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" Text="Click the button below to check what you published, your private lecture audio record, shared lecture audio record, posted review and received review." VerticalAlignment="Top" Height="129" FontSize="20" Width="327"/>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
